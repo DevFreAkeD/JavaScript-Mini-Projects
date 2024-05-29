@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container p-4">
+        <h1 class="text-2xl font-bold text-center mb-4">To-Do List</h1>
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="col-span-full w-full">
+                    <label for="task" class="block text-sm font-medium leading-6 text-gray-300 w-full">Username</label>
+                    <div class="mt-2 w-full">
+                        <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-600 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-400 w-full">
+                            <input type="text" id="new-task" name="task" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-300 placeholder:text-gray-500 focus:ring-0 sm:text-sm sm:leading-6 w-full" placeholder="Enter Task Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-full w-full">
+                    <label for="details" class="block text-sm font-medium leading-6 text-gray-300 w-full">Details</label>
+                    <div class="mt-2 w-full">
+                        <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-600 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-400 w-full">
+                            <input type="text" id="task-details" name="details" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-300 placeholder:text-gray-500 focus:ring-0 sm:text-sm sm:leading-6 w-full" placeholder="Enter Task Details">
+                        </div>
+                    </div>
+                    <button id="add-task-btn" class="mt-5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add Task</button>
+                </div>
+            </div>
+        </div>
+        <ul id="task-list" class="list-none p-0 w-full"></ul>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
