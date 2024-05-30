@@ -4,7 +4,7 @@ This is a simple task manager application built with HTML, TailwindCSS, and Java
 ## Getting Started
 To use the application, simply open the index.html file in your web browser. The application provides a form where you can enter a task description and details, and then add it to the list. You can mark tasks as complete or pending by clicking the corresponding buttons, and you can delete tasks by clicking the delete button.
 
-##Code Structure
+## Code Structure
 The JavaScript code `script.js` is structured as follows:
 
 **1. Event Listeners Setup:** The DOMContentLoaded event is used to ensure that the DOM is fully loaded before executing JavaScript code. Event listeners are added to the buttons for adding tasks, marking tasks as complete or pending, and clearing all tasks.
