@@ -4,3 +4,5 @@ These mini-projects provide hands-on experience, allowing you to learn and compr
 Projects:
 
 <a href="https://github.com/DevFreAkeD/JavaScript-Mini-Projects/tree/main/To-Do-List%20App">To Do List App</a>
+
+<a href="https://github.com/DevFreAkeD/JavaScript-Mini-Projects/tree/main/Calculator">Calculator</a>
