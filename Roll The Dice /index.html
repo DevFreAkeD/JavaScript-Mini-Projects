@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Roll The Dice</title>
+    <style>
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .rotate {
+            animation: rotate 0.6s linear infinite;
+        }        
+    </style>
+</head>
+<body class="bg-gray-400 flex flex-col min-h-screen">
+    <header class="w-full bg-gray-800 py-4 flex justify-center">
+        <img src="assets/logo.png" alt="logo" height="50" width="100">
+    </header>
+    <div class="flex-grow flex flex-col items-center justify-center">
+        <div class="section bg-white p-16 rounded shadow-md text-center w-full max-w-2xl">
+            <img src="assets/dice-1.png" alt="Dice Image" id="img" class="mx-auto mb-12" height="120" width="120">
+            <button id="btn" class="cursor-pointer bg-blue-600 text-white px-6 py-3 rounded" onclick="rollDice();">Roll 🎲</button>
+        </div>
+    </div>
+    <div class="w-full bg-gray-800 py-4">
+        <footer class="text-center">
+            <p class="text-gray-300">🎲 Roll The Dice with ❤️ by 
+            <a href="https://github.com/Dev_FreAkeD" class="text-blue-400">FreAkeD</a>
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
