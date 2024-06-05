@@ -6,3 +6,5 @@ Projects:
 <a href="https://github.com/DevFreAkeD/JavaScript-Mini-Projects/tree/main/To-Do-List%20App">To Do List App</a>
 
 <a href="https://github.com/DevFreAkeD/JavaScript-Mini-Projects/tree/main/Calculator">Calculator</a>
+
+<a href="https://github.com/DevFreAkeD/JavaScript-Mini-Projects/tree/main/Roll%20The%20Dice%20">Roll The Dice 🎲</a>
