@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- mobile status bar color -->
+    <meta name="theme-color" content="#fff">
+    <title>Sudoku</title>
+    <link rel="logo" href="assets/logo.png" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&amp;display=swap" rel="stylesheet">
+    <!-- box icons -->
+    <link href='../../unpkg.com/boxicons%402.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .main {
+            flex-grow: 1;
+        }
+        .cell {
+            /* Add your cell styling here */
+            border: 1px solid #000;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Add borders between each 3x3 box */
+        #sudoku-grid {
+            border-collapse: collapse;
+            padding: 5px;
+            border: 2px solid #000;
+        }
+        
+        #sudoku-grid .cell:nth-child(3n),
+        #sudoku-grid .cell:nth-child(6n) {
+            border-right: 2px solid #000;
+        }
+        
+        #sudoku-grid .cell:nth-child(n+19):nth-child(-n+27),
+        #sudoku-grid .cell:nth-child(n+46):nth-child(-n+54) {
+            border-bottom: 2px solid #000;
+        }    
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="w-full bg-gray-800 py-4 flex gap-4">
+        <img src="assets/logo.png" alt="logo" height="50" width="50" class="mt-3">
+        <h1 class="text-amber-500">Sudoku</h1>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center gap-4">
+        <!-- Sudoku Grid -->
+        <div id="sudoku-grid" class="grid grid-cols-9 gap-1"></div>
+
+        <!-- Level Dropdown -->
+        <select id="level-select" class="p-2 border border-gray-300 rounded">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <!-- Start Button -->
+        <button id="start-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Start
+        </button>
+
+        <!-- Timer -->
+        <div id="timer" class="text-2xl font-bold">00:00:00</div>
+
+        <!-- Moves Counter -->
+        <div id="moves-counter" class="text-xl font-bold">Moves: 0</div>
+    </main>
+
+    <footer class="w-full bg-gray-800 py-4 text-center">
+        <p class="text-gray-300">Sudoku with ❤️ by 
+            <a href="https://github.com/Dev_FreAkeD" class="text-blue-400">FreAkeD</a>
+        </p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/sudoku.js"></script>
+
+</body>
+</html>
