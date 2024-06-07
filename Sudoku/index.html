@@ -28,47 +28,54 @@
             flex-grow: 1;
         }
         .cell {
-            /* Add your cell styling here */
-            border: 1px solid #000;
-            width: 30px;
-            height: 30px;
+            border: 1px solid #4c4c4c;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #e0e0e0;
         }
-        
-        /* Add borders between each 3x3 box */
+
+        .cell input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: transparent;
+        }
+
+        .cell input:focus {
+            outline: none;
+            background-color: #b2dee4;
+        }
+
         #sudoku-grid {
             border-collapse: collapse;
-            padding: 5px;
-            border: 2px solid #000;
+            margin: 20px auto;
         }
-        
-        #sudoku-grid .cell:nth-child(3n),
-        #sudoku-grid .cell:nth-child(6n) {
-            border-right: 2px solid #000;
-        }
-        
-        #sudoku-grid .cell:nth-child(n+19):nth-child(-n+27),
-        #sudoku-grid .cell:nth-child(n+46):nth-child(-n+54) {
-            border-bottom: 2px solid #000;
-        }    
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-400 text-gray-800">
 
     <header class="w-full bg-gray-800 py-4 flex gap-4">
-        <img src="assets/logo.png" alt="logo" height="50" width="50" class="mt-3">
+        <img src="assets/logo.png" alt="logo" height="50" width="50" class="mx-3">
         <h1 class="text-amber-500">Sudoku</h1>
     </header>
 
     <main class="flex-grow flex flex-col items-center justify-center gap-4">
         <!-- Sudoku Grid -->
-        <div id="sudoku-grid" class="grid grid-cols-9 gap-1"></div>
+        <div class="bg-gray-600 rounded p-4">
+            <div id="sudoku-grid" class="grid grid-cols-9 gap-1"></div>
+        </div>
 
         <!-- Level Dropdown -->
-        <select id="level-select" class="p-2 border border-gray-300 rounded">
+        <select id="level-select" class="p-2 border border-gray-400 rounded">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
@@ -78,9 +85,6 @@
         <button id="start-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Start
         </button>
-
-        <!-- Timer -->
-        <div id="timer" class="text-2xl font-bold">00:00:00</div>
 
         <!-- Moves Counter -->
         <div id="moves-counter" class="text-xl font-bold">Moves: 0</div>
